@@ -1,0 +1,73 @@
+*{box-sizing: border-box;}
+body{
+    background-color: rgb(242, 250, 255);
+    color:rgb(72,96,188)
+}
+section{
+    border:solid 2px aliceblue;
+    display:block;
+}
+#ultrason{
+    background-color: rgb(248, 236, 249);
+    display:flex;
+    flex-wrap: wrap;
+    margin: 50px;
+    justify-content: space-evenly;
+    
+}
+#doppler{
+    
+    display:flex;
+    margin:50px;
+    justify-content: first baseline;
+    flex-wrap: wrap;
+    background-color: rgb(224, 244, 251);
+}
+#tetkikler{
+    justify-content: flex-start;
+}
+
+.tetkikBtn {
+    margin: 5px;
+}
+
+#odayaAtaBtn{
+    margin: 20px;
+}
+
+#secilenIstemler{display:flex;
+    justify-content: flex-start ;
+    flex-wrap: wrap;
+}
+
+.arter{
+    background-color:  rgb(248, 236, 229);
+}
+
+.ven{
+    background-color: rgb(213, 211, 244);
+}
+
+.digerdoppler{
+    background-color: rgb(194,233,244);
+}
+
+.usg{
+    background-color: rgb(218, 239, 233);
+}
+
+#odatablosu{overflow: scroll; height:150px; display:"none";}
+
+button {
+    background-color: rgb(245, 218, 248);
+}
+
+tr:nth-child(even) {
+    background-color: #f6f4f1;
+  }
+
+  tr:nth-child(odd) {
+    background-color: #f1f6f1;
+  }
+
+  th {background-color: rgb(240, 249, 255);}

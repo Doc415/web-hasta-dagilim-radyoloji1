@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  
+   
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radypşpji hasta paylaştırma</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h2>Hasta-Oda Dağıtımı</h2>
+        <section id="odalar">
+
+        </section>
+        <section id="eklemealani">
+            <button id="odaekle" onclick="odaekle()">
+                Oda ekle
+            </button>
+        </section>
+
+    </header>
+    <body>
+        <div id="tetkikler">
+            <h3>Hastaya ait istemleri seçiniz</h3>
+            <section id="ultrason" class="flex-container"> 
+                <button class="tetkikBtn usg" onclick='istemListesineEkle("tumabdomenus")'>Tüm Abdomen Usg</button>
+                <button class="tetkikBtn usg" onclick='istemListesineEkle("urinerus")'>Üriner Usg</button>
+                <button class="tetkikBtn usg" onclick='istemListesineEkle("ustabdomenus")'>Üst Abdomen Usg</button>
+                <button class="tetkikBtn usg" onclick='istemListesineEkle("altabdomenus")'>Alt Abdomen (Pelvik) Usg</button>
+                <button class="tetkikBtn usg" onclick='istemListesineEkle("hepatobiliyerus")'>Hepatobiliyer USG</button>
+                <button class="tetkikBtn usg" onclick='istemListesineEkle("tiroidus")'>Tiroid USG</button>
+                <button class="tetkikBtn usg" onclick='istemListesineEkle("yuzeyelus")'>Yüzeyel USG</button>
+                <button class="tetkikBtn usg" onclick='istemListesineEkle("kalcaus")'> Kalça USG</button>
+                <button class="tetkikBtn usg" onclick='istemListesineEkle("transfontanelus")'>Transfontanel USG</button>
+                <button class="tetkikBtn usg" onclick='istemListesineEkle("skrotalus")'>Skrotal USG</button>
+                <button class="tetkikBtn usg" onclick='istemListesineEkle("renalus")'>Renal USG</button>
+
+            </section>
+            
+            <section id="doppler" class="flex-container">
+                <button class="tetkikBtn digerdoppler" onclick='istemListesineEkle("karotisdoppler")'>Karotis Doppler</button>
+                <button class="tetkikBtn digerdoppler" onclick='istemListesineEkle("vertebraldoppler")'>Vertebral Doppler</button>
+                <button class="tetkikBtn digerdoppler" onclick='istemListesineEkle("karotisdoppler");istemListesineEkle("vertebraldoppler")'>Karotis+Vertebral Doppler</button>
+                <button class="tetkikBtn arter" onclick='istemListesineEkle("altarterdoppler")'>ALT eksremite ARTERİYEL (TEK taraf)</button>
+                <button class="tetkikBtn arter" onclick='istemListesineEkle("altarterdopplercift")'>ALT ekstremite ARTERİYEL (ÇİFT taraf)</button>
+                <button class="tetkikBtn ven" onclick='istemListesineEkle("altvendoppler")'>ALT ekstremite VENÖZ (TEK taraf)</button>
+                <button class="tetkikBtn ven" onclick='istemListesineEkle("altvendopplercift")'>ALT ekstremite VENÖZ(ÇİFT taraf)</button>
+                <button class="tetkikBtn digerdoppler" onclick='istemListesineEkle("skrotaldoppler")'>Skrotal Doppler</button>
+                <button class="tetkikBtn digerdoppler" onclick='istemListesineEkle("renaldoppler")'>Renal Doppler</button>
+                <button class="tetkikBtn digerdoppler" onclick='istemListesineEkle("aortadoppler")'>Aorta Doppler</button>
+                <button class="tetkikBtn arter" onclick='istemListesineEkle("ustarterdoppler")'>ÜST eksremite ARTERİYEL (TEK taraf)</button>
+                <button class="tetkikBtn arter" onclick='istemListesineEkle("ustarterdopplercift")'>ÜST ekstremite ARTERİYEL (ÇİFT taraf)</button>
+                <button class="tetkikBtn ven" onclick='istemListesineEkle("ustvendoppler")'>ÜST ekstremite VENÖZ (TEK taraf)</button>
+                <button class="tetkikBtn ven" onclick='istemListesineEkle("ustvendopplercift")'>ÜST ekstremite VENÖZ(ÇİFT taraf)</button>
+
+            </section>
+            <div>
+                <h3>Listeye eklenen istemler</h3>
+                <section id="secilenIstemler">
+                
+
+                </section>
+            </div>
+            <section id="odatablosu">
+                
+                    <table id="odatablosuicerik" class="table table-stripped">
+                        <thead >
+                            <tr id="istembaslik">
+                               
+                            </tr>
+                        </thead>
+                        <tbody id="tablobody">
+                           
+                            
+                        </tbody>
+                    </table>
+               
+                
+            </section>
+       
+       
+       
+        </div>
+        
+    </body>
+    <footer>
+        <button id="odayaAtaBtn" onclick="istemleriOdayaAktar()">Odaya Ata</button>
+        <button id="listeyiTemizleBtn" onclick="istemListesiniTemizle()">Listeyi Temizle</button>
+        <button id="tabloackapa" onclick="tablogoster()">Tabloyu kaldır</button>
+        <h4>Eklenen oda</h4>
+        <h2 id="sonucEkrani"></h2>
+    </footer>
+    
+    <script src="hasta-doktor.js"> </script>
+    <!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
