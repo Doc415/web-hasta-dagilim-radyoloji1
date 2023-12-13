@@ -19,7 +19,7 @@ let tetkikBasliklari=["tumabdomenus","ustabdomenus","altabdomenus","hepatobiliye
 "karotisdoppler","vertebraldoppler","altvendoppler","ustvendoppler","altarterdoppler","ustarterdoppler",
 "renaldoppler","aortadoppler","skrotaldoppler"]
 var odaindeks=0;
-var tablo=true;
+var tablo=false;
 var istemListesi=[]
 var odaListesi=[]
 console.log(istemListesi)
