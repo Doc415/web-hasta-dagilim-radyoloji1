@@ -16,6 +16,7 @@
     <header>
         <h2>Hasta-Oda Dağıtımı</h2>
         <section id="odalar">
+            <h4 style="display:inline-block;margin-right: 30px;">Odalar: </h4>
 
         </section>
         <section id="eklemealani">
@@ -26,8 +27,13 @@
 
     </header>
     <body>
-        <div id="tetkikler">
-            <h3>Hastaya ait istemleri seçiniz</h3>
+        <div style="display:flex;align-items: center;">
+        <h3 style="display:inline-block;flex-grow: 5;">Hastaya ait istemleri seçiniz</h3>
+        <h4 style="display: inline-block;flex-grow: 1;">Eklenen oda</h4>
+        <h2 id="sonucEkrani" style="display: inline-block;flex-grow: 1;"></h2>
+        </div>
+        <div id="tetkikler" class="flex-container">
+           
             <section id="ultrason" class="flex-container"> 
                 <button class="tetkikBtn usg" onclick='istemListesineEkle("tumabdomenus")'>Tüm Abdomen Usg</button>
                 <button class="tetkikBtn usg" onclick='istemListesineEkle("urinerus")'>Üriner Usg</button>
@@ -60,43 +66,44 @@
                 <button class="tetkikBtn ven" onclick='istemListesineEkle("ustvendopplercift")'>ÜST ekstremite VENÖZ(ÇİFT taraf)</button>
 
             </section>
-            <div>
-                <h3>Listeye eklenen istemler</h3>
+           
+            <div id="listeekrani">
+                <h3 style="display:inline-block;">Listeye eklenen istemler</h3>
+                <button id="odayaAtaBtn" onclick="istemleriOdayaAktar()">Odaya Ata</button>
+                <button id="listeyiTemizleBtn" onclick="istemListesiniTemizle()">Listeyi Temizle</button>
                 <section id="secilenIstemler">
                 
-
+    
                 </section>
             </div>
-            <div id="tablecontainer">
-            <section id="odatablosu">
-                
-                    <table id="odatablosuicerik" class="table">
-                        <thead id="tablohead">
-                            <tr id="istembaslik">
-                               
-                            </tr>
-                        </thead>
-                        <tbody id="tablobody">
-                           
-                            
-                        </tbody>
-                    </table>
-               
-                
-            </section>
-            </div>
-       
        
        
         </div>
         
+        <div id="tablecontainer">
+        <section id="odatablosu">
+            
+                <table id="odatablosuicerik" class="table">
+                    <thead id="tablohead">
+                        <tr id="istembaslik">
+                           
+                        </tr>
+                    </thead>
+                    <tbody id="tablobody">
+                       
+                        
+                    </tbody>
+                </table>
+           
+            
+        </section>
+        </div>
+        
     </body>
     <footer>
-        <button id="odayaAtaBtn" onclick="istemleriOdayaAktar()">Odaya Ata</button>
-        <button id="listeyiTemizleBtn" onclick="istemListesiniTemizle()">Listeyi Temizle</button>
+       
         <button id="tabloackapa" onclick="tablogoster()">Tabloyu kaldır</button>
-        <h4>Eklenen oda</h4>
-        <h2 id="sonucEkrani"></h2>
+       
     </footer>
     
     <script src="hasta-doktor.js"> </script>

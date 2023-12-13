@@ -11,20 +11,33 @@ section{
     background-color: rgb(248, 236, 249);
     display:flex;
     flex-wrap: wrap;
-    margin: 50px;
-    justify-content: space-evenly;
+    margin: 20px;
+    justify-content: left  ;
+    width: 15%;
     
+}
+
+#listeekrani{ display:block;
+    margin:50px;
+    justify-content: left;
+    flex-wrap: wrap;
+    background-color: rgb(224, 244, 251);
+    width:33%;
+
 }
 #doppler{
     
     display:flex;
     margin:50px;
-    justify-content: first baseline;
+    justify-content: left;
     flex-wrap: wrap;
     background-color: rgb(224, 244, 251);
+    width:33%;
 }
 #tetkikler{
+    display:flex;   
     justify-content: flex-start;
+    
 }
 
 .tetkikBtn {
