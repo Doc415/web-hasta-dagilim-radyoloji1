@@ -9,22 +9,36 @@ section{
 }
 #ultrason{
     background-color: rgb(248, 236, 249);
-    display:flex;
+    display:inline-block;
     flex-wrap: wrap;
-    margin: 50px;
-    justify-content: space-evenly;
+    margin: 20px;
+    justify-content: left;
+    width:200px;
+ 
+    
+}
+
+#ultrason2{
+    background-color: rgb(248, 236, 249);
+    display:inline-block;
+    flex-wrap: wrap;
+    margin: 20px;
+    justify-content: left;
+    width:200px;
     
 }
 #doppler{
-    
-    display:flex;
+    width:300px;
+    display:inline-block;
     margin:50px;
-    justify-content: first baseline;
+    justify-content: left;
     flex-wrap: wrap;
     background-color: rgb(224, 244, 251);
 }
 #tetkikler{
     justify-content: flex-start;
+    margin: 0;
+    padding: 0;
 }
 
 .tetkikBtn {
