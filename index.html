@@ -26,18 +26,15 @@
 
     </header>
     <body>
-        <div id="tetkikler" class="container">
+        <div id="tetkikler">
             <h3>Hastaya ait istemleri seçiniz</h3>
-            <section id="ultrason" class="flex-container col-3"> 
-                
+            <section id="ultrason" class="flex-container"> 
                 <button class="tetkikBtn usg" onclick='istemListesineEkle("tumabdomenus")'>Tüm Abdomen Usg</button>
                 <button class="tetkikBtn usg" onclick='istemListesineEkle("urinerus")'>Üriner Usg</button>
                 <button class="tetkikBtn usg" onclick='istemListesineEkle("ustabdomenus")'>Üst Abdomen Usg</button>
                 <button class="tetkikBtn usg" onclick='istemListesineEkle("altabdomenus")'>Alt Abdomen (Pelvik) Usg</button>
                 <button class="tetkikBtn usg" onclick='istemListesineEkle("hepatobiliyerus")'>Hepatobiliyer USG</button>
                 <button class="tetkikBtn usg" onclick='istemListesineEkle("tiroidus")'>Tiroid USG</button>
-            </section>
-            <section id="ultrason2" class="flex-container col-3">   
                 <button class="tetkikBtn usg" onclick='istemListesineEkle("yuzeyelus")'>Yüzeyel USG</button>
                 <button class="tetkikBtn usg" onclick='istemListesineEkle("kalcaus")'> Kalça USG</button>
                 <button class="tetkikBtn usg" onclick='istemListesineEkle("transfontanelus")'>Transfontanel USG</button>
@@ -45,8 +42,8 @@
                 <button class="tetkikBtn usg" onclick='istemListesineEkle("renalus")'>Renal USG</button>
 
             </section>
-
-            <section id="doppler" class="flex-container col-3">
+            
+            <section id="doppler" class="flex-container">
                 <button class="tetkikBtn digerdoppler" onclick='istemListesineEkle("karotisdoppler")'>Karotis Doppler</button>
                 <button class="tetkikBtn digerdoppler" onclick='istemListesineEkle("vertebraldoppler")'>Vertebral Doppler</button>
                 <button class="tetkikBtn digerdoppler" onclick='istemListesineEkle("karotisdoppler");istemListesineEkle("vertebraldoppler")'>Karotis+Vertebral Doppler</button>
@@ -63,9 +60,6 @@
                 <button class="tetkikBtn ven" onclick='istemListesineEkle("ustvendopplercift")'>ÜST ekstremite VENÖZ(ÇİFT taraf)</button>
 
             </section>
-            
-            
-          
             <div>
                 <h3>Listeye eklenen istemler</h3>
                 <section id="secilenIstemler">
