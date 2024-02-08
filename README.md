@@ -1,0 +1,1 @@
+In large radiology clinics there are many ultrasound rooms. Patients need different type of examinations that need different time span. This web application distrubites the different type of examinations evenly to the rooms.
